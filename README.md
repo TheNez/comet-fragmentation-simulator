@@ -2,7 +2,7 @@
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/comet-fragmentation-simulator.svg)](https://github.com/yourusername/comet-fragmentation-simulator/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/TheNez/comet-fragmentation-simulator.svg)](https://github.com/TheNez/comet-fragmentation-simulator/stargazers)
 
 A comprehensive physics-based simulation system for modeling comet fragmentation events, featuring the famous **Shoemaker-Levy 9** case study.
 
@@ -66,8 +66,8 @@ This simulator successfully recreates the famous 1992 fragmentation of Comet Sho
 ### Setup
 ```bash
 # Clone the repository
-git clone <repository-url>
-cd comets_fragmentation
+git clone https://github.com/TheNez/comet-fragmentation-simulator.git
+cd comet-fragmentation-simulator
 
 # Create and activate virtual environment
 python3 -m venv comet_env
