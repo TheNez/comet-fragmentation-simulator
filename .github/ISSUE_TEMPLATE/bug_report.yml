@@ -1,0 +1,163 @@
+name: Bug Report
+description: Report a bug or unexpected behavior
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! 🐛
+        
+        Please fill out this form with as much detail as possible to help us investigate and fix the issue.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+      placeholder: Describe what happened and what you expected to happen...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Detailed steps to reproduce the behavior
+      placeholder: |
+        1. Run command '...'
+        2. Set parameters '...'
+        3. See error
+      value: |
+        1. 
+        2. 
+        3. 
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+      placeholder: The simulation should have...
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+      placeholder: Instead, the simulation...
+    validations:
+      required: true
+
+  - type: textarea
+    id: error
+    attributes:
+      label: Error Output
+      description: Copy and paste any error messages or stack traces
+      placeholder: |
+        Traceback (most recent call last):
+          File "...", line ..., in ...
+        Error: ...
+      render: shell
+
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: What version of the simulator are you using?
+      options:
+        - v1.0.0 (latest)
+        - main branch (development)
+        - Other (please specify in additional context)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: python
+    attributes:
+      label: Python Version
+      description: What version of Python are you using?
+      options:
+        - Python 3.11
+        - Python 3.10
+        - Python 3.9
+        - Python 3.8
+        - Other (please specify)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      description: What operating system are you using?
+      options:
+        - macOS
+        - Windows
+        - Linux (Ubuntu)
+        - Linux (other)
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment Details
+      description: |
+        Please provide additional environment information:
+        - Package versions (run `pip list | grep -E "(numpy|scipy|matplotlib)"`)
+        - Virtual environment details
+        - Any custom configurations
+      placeholder: |
+        numpy==1.24.0
+        scipy==1.10.0
+        matplotlib==3.7.0
+        
+        Virtual environment: Yes/No
+        Custom configuration: ...
+
+  - type: textarea
+    id: physics
+    attributes:
+      label: Physics Context
+      description: |
+        For physics-related bugs:
+        - What simulation parameters were you using?
+        - What physical scenario were you modeling?
+        - Are the results physically unreasonable?
+      placeholder: |
+        Simulation: Shoemaker-Levy 9
+        Parameters: mass=1e11 kg, radius=400m
+        Issue: Energy not conserved / unrealistic forces / etc.
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: |
+        Add any other context about the problem:
+        - Screenshots of visualizations
+        - Configuration files
+        - Related issues
+        - Workarounds you've tried
+      placeholder: Any additional information that might help...
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      description: Please confirm the following
+      options:
+        - label: I have searched existing issues to ensure this is not a duplicate
+          required: true
+        - label: I have included all necessary information to reproduce the bug
+          required: true
+        - label: I have tested with the latest version
+          required: true
+        - label: This is a genuine bug and not a usage question (for questions, use Discussions)
+          required: true

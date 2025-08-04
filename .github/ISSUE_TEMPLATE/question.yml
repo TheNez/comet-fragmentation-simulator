@@ -1,0 +1,116 @@
+name: Question or Discussion
+description: Ask a question or start a discussion about the project
+title: "[Question]: "
+labels: ["question", "discussion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your question! 🤔
+        
+        This template is for general questions, discussions about the science, usage help, or clarifications about the project.
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Question Category
+      description: What type of question is this?
+      options:
+        - Usage/How-to (how to use the simulator)
+        - Scientific/Physics (questions about the science)
+        - Installation/Setup (getting started)
+        - Results/Interpretation (understanding output)
+        - Performance/Optimization (speed, memory usage)
+        - Comparison (vs other tools/methods)
+        - General Discussion (ideas, feedback)
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: What would you like to know or discuss?
+      placeholder: |
+        I'm trying to understand...
+        How can I...
+        What is the difference between...
+        Why does...
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: |
+        Provide relevant context:
+        - What are you trying to achieve?
+        - What have you tried so far?
+        - What documentation have you consulted?
+      placeholder: |
+        I'm working on...
+        I've tried...
+        I looked at the documentation for...
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment (if relevant)
+      description: |
+        If this is a usage question, please provide:
+        - Operating system
+        - Python version
+        - Package versions
+        - Command or code you're running
+      placeholder: |
+        OS: macOS/Linux/Windows
+        Python: 3.x
+        Package versions: (from pip freeze)
+        
+        Code/Command:
+        ```python
+        # Your code here
+        ```
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected or Desired Outcome
+      description: |
+        What outcome are you expecting or hoping for?
+        - What should happen?
+        - What results are you looking for?
+      placeholder: |
+        I expected to see...
+        I'm hoping to achieve...
+        The result should be...
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Information
+      description: |
+        Any additional context, references, or information:
+        - Links to papers or documentation
+        - Screenshots or plots
+        - Related issues or discussions
+      placeholder: |
+        Related resources:
+        - Documentation link: ...
+        - Scientific paper: ...
+        - Similar question: ...
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      description: Please confirm the following
+      options:
+        - label: I have searched existing issues and discussions
+          required: true
+        - label: I have consulted the documentation
+          required: true
+        - label: This is not a bug report (use the bug report template instead)
+          required: true

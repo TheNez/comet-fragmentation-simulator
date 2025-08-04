@@ -1,0 +1,206 @@
+name: Feature Request
+description: Suggest a new feature or enhancement
+title: "[Feature]: "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new feature! 🚀
+        
+        Help us understand what you'd like to see added to the Comet Fragmentation Simulator.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Feature Summary
+      description: A brief summary of the feature you'd like to see
+      placeholder: Add support for...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Feature Category
+      description: What type of feature is this?
+      options:
+        - Physics/Science (new models, forces, calculations)
+        - Visualization (plots, animations, interactive features)
+        - Performance (optimization, parallelization)
+        - Usability (API improvements, documentation)
+        - Data (import/export, formats, analysis)
+        - Examples (new case studies, tutorials)
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: |
+        Why would this feature be useful? What problem does it solve?
+        What use cases does it enable?
+      placeholder: |
+        This would be useful because...
+        It would enable researchers to...
+        Current limitations include...
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Detailed Description
+      description: |
+        Provide a detailed description of the feature:
+        - How should it work?
+        - What should the user interface look like?
+        - What are the technical requirements?
+      placeholder: |
+        The feature should work by...
+        
+        User interface:
+        - Command: `simulate_comet --new-feature`
+        - Parameters: ...
+        
+        Technical requirements:
+        - New physics calculations
+        - Additional dependencies
+        - Performance considerations
+    validations:
+      required: true
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Usage Examples
+      description: |
+        Provide examples of how this feature would be used:
+        - Code snippets
+        - Command line usage
+        - Configuration examples
+      placeholder: |
+        ```python
+        # Example usage
+        simulator = CometSimulator(new_feature=True)
+        results = simulator.run_with_new_feature()
+        ```
+        
+        Or command line:
+        ```bash
+        python simulate.py --enable-new-feature
+        ```
+
+  - type: textarea
+    id: scientific
+    attributes:
+      label: Scientific Background
+      description: |
+        For physics/science features:
+        - What scientific principles are involved?
+        - Are there relevant papers or references?
+        - What are the mathematical models?
+      placeholder: |
+        Scientific basis:
+        - Based on research by [Author et al., Year]
+        - Implements [specific physics model]
+        - Relevant equations: ...
+        
+        References:
+        - Paper 1: DOI or URL
+        - Paper 2: DOI or URL
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: |
+        What alternatives have you considered?
+        - Different approaches to the same problem
+        - Existing tools or libraries
+        - Workarounds you're currently using
+      placeholder: |
+        Alternative approaches:
+        1. Using external tool X, but it lacks...
+        2. Manual calculation, but it's inefficient...
+        3. Different algorithm Y, but it has limitations...
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this feature to you?
+      options:
+        - High (critical for my research/work)
+        - Medium (would be very helpful)
+        - Low (nice to have)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: complexity
+    attributes:
+      label: Implementation Complexity
+      description: How complex do you think this feature would be to implement?
+      options:
+        - Simple (small addition to existing code)
+        - Medium (new module or significant changes)
+        - Complex (major architectural changes)
+        - Unknown (not sure about complexity)
+
+  - type: textarea
+    id: implementation
+    attributes:
+      label: Implementation Ideas
+      description: |
+        Do you have ideas about how this could be implemented?
+        - Which files/modules would need changes?
+        - Are there external dependencies needed?
+        - Any implementation challenges you foresee?
+      placeholder: |
+        Implementation approach:
+        - Modify comet_sim/physics/forces.py to add...
+        - Create new module for...
+        - Add dependency on library X
+        
+        Potential challenges:
+        - Performance considerations
+        - Numerical stability
+        - Integration with existing code
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: |
+        Any other context, mockups, or references:
+        - Links to similar features in other tools
+        - Academic papers or documentation
+        - Screenshots or diagrams
+      placeholder: Any additional information...
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      description: Are you willing to help implement this feature?
+      options:
+        - label: I would be willing to work on this feature
+        - label: I can provide scientific/domain expertise
+        - label: I can help with testing and validation
+        - label: I prefer someone else implements it
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      description: Please confirm the following
+      options:
+        - label: I have searched existing issues to ensure this is not a duplicate
+          required: true
+        - label: This feature aligns with the project's scientific goals
+          required: true
+        - label: I have provided sufficient detail for implementation
+          required: true
